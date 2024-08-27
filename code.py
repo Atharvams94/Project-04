@@ -60,19 +60,7 @@ class WeatherFetcher:
         self.api_key = api_key
         self.base_url = base_url
 
-    async def fetch_weather(self, city):
-        params = {
-            'q': city,
-            'appid': self.api_key,
-            'units': 'metric'
-        }
-        async with aiohttp.ClientSession() as session:
-            async with session.get(self.base_url, params=params) as response:
-                if response.status == 200:
-                    data = await response.json()
-                    return data
-                else:
-                    response.raise_for_status()
+   
 
     async def save_weather_data(self, city, data):
         filename = f"{city}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
