@@ -8,17 +8,6 @@ import seaborn as sns
 
 # API key for accessing a weather data API
 api_key = "your_api_key"
-
-# Function to fetch weather data for a given city and date
-def fetch_weather_data(city, date):
-    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&dt={date}&appid={api_key}"
-    response = requests.get(url)
-    data = json.loads(response.text)
-    return data
-
-# Function to extract relevant weather information from the data
-def extract_weather_info(data):
-    temperature = data["main"]["temp"]
     humidity = data["main"]["humidity"]
     pressure = data["main"]["pressure"]
     wind_speed = data["wind"]["speed"]
