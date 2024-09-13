@@ -6,23 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-# API key for accessing a weather data API
-api_key = "your_api_key"
-    humidity = data["main"]["humidity"]
-    pressure = data["main"]["pressure"]
-    wind_speed = data["wind"]["speed"]
-    weather_description = data["weather"][0]["description"]
-    return temperature, humidity, pressure, wind_speed, weather_description
 
-# Function to analyze weather data for a given city and date range
-def analyze_weather_data(city, start_date, end_date):
-    data = []
-    for date in pd.date_range(start_date, end_date):
-        weather_data = fetch_weather_data(city, date.timestamp())
-        temperature, humidity, pressure, wind_speed, weather_description = extract_weather_info(weather_data)
-        data.append([date, temperature, humidity, pressure, wind_speed, weather_description])
-    df = pd.DataFrame(data, columns=["Date", "Temperature", "Humidity", "Pressure", "Wind Speed", "Weather Description"])
-    return df
 
 # Example usage
 city = "New York"
