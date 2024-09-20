@@ -60,18 +60,7 @@ def fft(data):
   
   return np.fft.fft(data)
 
-# Sample data
-data = np.random.rand(100)
 
-# Calculate FFT
-fft_result = fft(data)
-
-# Print the magnitude of the frequency spectrum (absolute values)
-print(np.abs(fft_result))
-
-def analyze_data(data_file, algorithm="default"):
- 
-  # Read data from file
   try:
     with open(data_file, 'r') as f:
       data = f.readlines()
