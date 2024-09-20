@@ -5,9 +5,34 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-
 import cv2
 import face_recognition
+
+
+# Load image
+image = cv2.imread("path/to/your/image.jpg")
+
+# Detect faces in the image
+face_locations = face_recognition.face_locations(image)
+
+# Encode facial features
+face_encodings = face_recognition.face_encodings(image, face_locations)
+
+# Load a known image for comparison
+known_image = cv2.imread("path/to/known_face.jpg")
+known_face_encoding = face_recognition.face_encodings(known_image)[0]
+
+# Compare faces
+results = face_recognition.compare_faces([known_face_encoding], face_encodings[0])
+
+# Draw a box around the face if a match is found
+if results[0]:
+    cv2.rectangle(image, (face_locations[0][0], face_locations[0][1]), (face_locations[0][2], face_locations[0][3]), (0, 0, 255), 2)
+
+# Display the image
+cv2.imshow('Image', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 # Load image
 image = cv2.imread("path/to/your/image.jpg")
