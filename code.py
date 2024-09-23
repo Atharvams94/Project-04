@@ -9,21 +9,6 @@ import cv2
 import face_recognition
 
 
-# Load image
-image = cv2.imread("path/to/your/image.jpg")
-
-# Detect faces in the image
-face_locations = face_recognition.face_locations(image)
-
-# Encode facial features
-face_encodings = face_recognition.face_encodings(image, face_locations)
-
-# Load a known image for comparison
-known_image = cv2.imread("path/to/known_face.jpg")
-known_face_encoding = face_recognition.face_encodings(known_image)[0]
-
-# Compare faces
-results = face_recognition.compare_faces([known_face_encoding], face_encodings[0])
 
 # Draw a box around the face if a match is found
 if results[0]:
