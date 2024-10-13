@@ -2,16 +2,7 @@ import numpy as np
 
 def fft(data):
  
-  return np.fft.fft(data)
-
-# Sample data
-data = np.random.rand(100)
-
-
-  return results
-
-# Example usage
-data_path = "data.txt"  # Replace with your actual data file path
+ta file path
 analysis_results = analyze_data(data_path, algorithm="advanced")
 
 if analysis_results:
