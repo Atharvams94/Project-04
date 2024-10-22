@@ -44,10 +44,7 @@ cv2.imshow('Image', image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# Example usage
-city = "New York"
-start_date = "2023-01-01"
-end_date = "2023-12-31"
+
 
 weather_data = analyze_weather_data(city, start_date, end_date)
 
