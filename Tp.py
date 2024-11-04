@@ -1,10 +1,6 @@
 import numpy as np
 
 def fft(data):
- 
-ta file path
-analysis_results = analyze_data(data_path, algorithm="advanced")
-
 if analysis_results:
   print("Analysis Results:")
   
