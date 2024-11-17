@@ -67,9 +67,5 @@ async def main():
     tasks = [weather_fetcher.get_and_save_weather(city) for city in cities]
     await asyncio.gather(*tasks)
 
-if __name__ == "__main__":
-    asyncio.run(main())
 
-  for key, value in analysis_results.items():
-    print(f"{key}: {value}")
 
