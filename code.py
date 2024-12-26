@@ -10,20 +10,7 @@ import face_recognition
 
 
 
-# Draw a box around the face if a match is found
-if results[0]:
-    cv2.rectangle(image, (face_locations[0][0], face_locations[0][1]), (face_locations[0][2], face_locations[0][3]), (0, 0, 255), 2)
 
-# Display the image
-cv2.imshow('Image', image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-# Load image
-image = cv2.imread("path/to/your/image.jpg")
-
-# Detect faces in the image
-face_locations = face_recognition.face_locations(image)
 
 # Encode facial features
 face_encodings = face_recognition.face_encodings(image, face_locations)
