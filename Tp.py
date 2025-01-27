@@ -38,13 +38,7 @@ from datetime import datetime
         humidity = data['main']['humidity']
         wind_speed = data['wind']['speed']
 
-        return f"""
-        Weather: {weather_desc}
-        Temperature: {temp}°C
-        Feels Like: {feels_like}°C
-        Humidity: {humidity}%
-        Wind Speed: {wind_speed} m/s
-        """
+    
 
     async def get_and_save_weather(self, city):
         try:
