@@ -38,26 +38,7 @@ weather_data = analyze_weather_data(city, start_date, end_date)
 # Data analysis and visualization
 print(weather_data.describe())
 
-plt.figure(figsize=(10, 6))
-plt.plot(weather_data["Date"], weather_data["Temperature"])
-plt.xlabel("Date")
-plt.ylabel("Temperature (K)")
-plt.title(f"Temperature in {city}")
-plt.show()
 
-sns.pairplot(weather_data[["Temperature", "Humidity", "Pressure", "Wind Speed"]])
-plt.show()
-
-correlation_matrix = weather_data[["Temperature", "Humidity", "Pressure", "Wind Speed"]].corr()
-print(correlation_matrix)
-def fft(data):
-  
-  return np.fft.fft(data)
-
-
-  try:
-    with open(data_file, 'r') as f:
-      data = f.readlines()
   except FileNotFoundError:
     print(f"Error: File {data_file} not found.")
     return None
