@@ -35,8 +35,6 @@ cv2.destroyAllWindows()
 
 weather_data = analyze_weather_data(city, start_date, end_date)
 
-# Data analysis and visualization
-print(weather_data.describe())
 
 
   except FileNotFoundError:
