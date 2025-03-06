@@ -31,12 +31,6 @@ from datetime import datetime
             await file.write(json.dumps(data, indent=4))
         print(f"Weather data saved to {filename}")
 
-    def parse_weather_data(self, data):
-        weather_desc = data['weather'][0]['description']
-        temp = data['main']['temp']
-        feels_like = data['main']['feels_like']
-        humidity = data['main']['humidity']
-        wind_speed = data['wind']['speed']
 
     
             print(f"Error fetching weather data for {city}: {e}")
