@@ -37,18 +37,7 @@ weather_data = analyze_weather_data(city, start_date, end_date)
 
 
 
-  except FileNotFoundError:
-    print(f"Error: File {data_file} not found.")
-    return None
-
-  # Preprocess data (remove empty lines, convert to floats)
-  data = [float(line.strip()) for line in data if line.strip()]
-
-  # Choose analysis algorithm
-  if algorithm == "default":
-    results = {"average": sum(data) / len(data)}
-  elif algorithm == "advanced":
-    # Import libraries for advanced analysis (assuming not built-in)
+  uilt-in)
     import statistics
     results = {
       "average": statistics.mean(data),
