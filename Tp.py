@@ -32,9 +32,6 @@ from datetime import datetime
         print(f"Weather data saved to {filename}")
 
 
-    
-            print(f"Error fetching weather data for {city}: {e}")
-
 async def main():
     api_key = 'your_openweathermap_api_key'  # Replace with your actual API key
     cities = ['London', 'New York', 'Tokyo', 'Sydney']
